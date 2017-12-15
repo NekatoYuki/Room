@@ -1,7 +1,8 @@
 
 public class Person {
-	String firstName;
-	String familyName;
+	
+	int Protec;
+	int Attac;
 	int xLoc, yLoc;
 	
 	public int getxLoc() {
@@ -19,13 +20,29 @@ public class Person {
 	public void setyLoc(int yLoc) {
 		this.yLoc = yLoc;
 	}
+	
+	public int getProtec() {
+		return Protec;
+	}
 
-	public Person (String firstName, String familyName, int xLoc, int yLoc)
+	public void setProtec(int protec) {
+		Protec = protec;
+	}
+
+	public int getAttac() {
+		return Attac;
+	}
+
+	public void setAttac(int attac) {
+		Attac = attac;
+	}
+	
+	public Person (int xLoc, int yLoc, int Protec, int Attac)
 	{
-		this.firstName = firstName;
-		this.familyName = familyName;
 		this.xLoc = xLoc;
 		this.yLoc = yLoc;
+		this.Protec = Protec;
+		this.Attac = Attac;
 	}
 
 
