@@ -27,4 +27,8 @@ public class BausRoom extends Room
 			System.out.print("ya win");
 		}
 	}
+	public void toPrint()
+	{
+		System.out.print("[  ]");
+	}
 }

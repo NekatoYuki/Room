@@ -14,6 +14,12 @@ public class Trapdoor extends Room
 		x.setyLoc(0);
 		System.out.println("You fell into a trapdoor! Sent back to square one!");
 	}
+	
+	public void toPrint()
+	{
+		System.out.print("[  ]");
+	}
+
 }
 
 

@@ -2,7 +2,7 @@
 public class WarpZone extends Room {
 	
 	Room[][] building = new Room[5][5];
-
+	boolean isIn = false;
 	public WarpZone(int c, int d)
 	{
 		super(c, d);
@@ -10,6 +10,7 @@ public class WarpZone extends Room {
 	@Override
 	public void enterRoom(Person x)
 	{
+		isIn = true;
 		occupant = x;
 		x.setxLoc((int)(Math.random()*building.length));
 		x.setyLoc((int)(Math.random()*building.length));
@@ -17,6 +18,17 @@ public class WarpZone extends Room {
 		
 	}
 
+	public void toPrint()
+	{
+		if (isIn == true) 
+		{
+			System.out.print("[O*]");
+		}
+		else if (isIn == false)
+		{
+			System.out.print("[O ]");
+		}
+	}
 }
 
 

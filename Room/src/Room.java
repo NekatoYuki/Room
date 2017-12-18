@@ -21,6 +21,10 @@ public class Room {
 		occupant = null;
 	}
 	
+	public void toPrint()
+	{
+		System.out.print("[  ]");
+	}
 }
 
 

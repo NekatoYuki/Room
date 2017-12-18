@@ -3,10 +3,15 @@ import java.util.Scanner;
 public class Runner {
 	
 
-	private static boolean gameOn = true;
+	public static boolean gameOn = true;
 	
 	public static void main(String[] args)
 	{
+		
+		
+
+		
+		
 		Room[][] building = new Room[5][5];
 		
 		//Fill the building with normal rooms
@@ -29,14 +34,16 @@ public class Runner {
 		building[x][y] = new Trapdoor(2, 3);
 		
 		//Create a random WarpZone.
-		building[x][y] = new WarpZone(4, 4);
-		building[x][y] = new WarpZone(0, 4);
-		building[x][y] = new WarpZone(4, 0);
-		building[x][y] = new WarpZone(4, 4);
+		building[4][4] = new WarpZone(4, 4);
+		building[0][4] = new WarpZone(0, 4);
+		building[4][0] = new WarpZone(4, 0);
 		
 		DatBoi baus1 = new DatBoi(1, 1, 5, 5);
 		building[1][1] = new BausRoom (1, 1, baus1);
 		
+		
+		Board board = new Board (building);
+		board.printboard();
 		 //Setup player 1 and the input scanner
 		Person player1 = new Person (0,0, 10, 10);
 		building[0][0].enterRoom(player1);

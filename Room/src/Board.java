@@ -1,13 +1,25 @@
-
+import java.util.Scanner;
 public class Board 
 {
-	Room[][] rooms;
-	public Board()
+	private Room[][] rooms;
+	public  Board(Room [][] rooms)
+	{
+		this.rooms=rooms;
+	}
+		
+	public void printboard()
+	{
+	while(Runner.gameOn)
 	{
 		for (Room[]i:rooms)
 		{
-			x.print;
+			for (Room j : i)
+				{
+					j.toPrint();
+				}
+			System.out.println();
 		}
-		System.out.println();
+		
+		}
 	}
 }

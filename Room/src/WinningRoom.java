@@ -17,7 +17,10 @@ public class WinningRoom extends Room {
 		Runner.gameOff();
 	}
 	
-
+	public void toPrint()
+	{
+		System.out.print("[  ]");
+	}
 }
 
 
