@@ -15,18 +15,17 @@ public class WarpZone extends Room {
 		x.setxLoc((int)(Math.random()*building.length));
 		x.setyLoc((int)(Math.random()*building.length));
 		System.out.println("You have entered a WarpZone! Sending player to random room...");
-		
 	}
 
 	public void toPrint()
 	{
-		if (isIn == true) 
+		if(occupant!= null)
 		{
-			System.out.print("[O*]");
+			System.out.print("[(x]");
 		}
-		else if (isIn == false)
+		else
 		{
-			System.out.print("[O ]");
+			System.out.print("[()]");
 		}
 	}
 }
