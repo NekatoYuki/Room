@@ -43,13 +43,14 @@ public class Runner {
 		
 		
 		Board board = new Board (building);
-		board.printboard();
+	
 		 //Setup player 1 and the input scanner
 		Person player1 = new Person (0,0, 10, 10);
 		building[0][0].enterRoom(player1);
 		Scanner in = new Scanner(System.in);
 		while(gameOn)
 		{
+			board.printboard();
 			System.out.println("Where would you like to move? (Choose W, A, S, D)");
 			String move = in.nextLine();
 			if(validMove(move, player1, building))

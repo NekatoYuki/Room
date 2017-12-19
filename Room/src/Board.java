@@ -9,8 +9,8 @@ public class Board
 		
 	public void printboard()
 	{
-	while(Runner.gameOn)
-	{
+
+	
 		for (Room[]i:rooms)
 		{
 			for (Room j : i)
@@ -20,6 +20,6 @@ public class Board
 			System.out.println();
 		}
 		
-		}
+		
 	}
 }
