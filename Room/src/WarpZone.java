@@ -20,13 +20,14 @@ public class WarpZone extends Room {
 
 	public void toPrint()
 	{
-		if (isIn == true) 
+		if(occupant!= null)
 		{
-			System.out.print("[O*]");
+			System.out.print("[(x]");
+			occupant = null;
 		}
-		else if (isIn == false)
+		else
 		{
-			System.out.print("[O ]");
+			System.out.print("[()]");
 		}
 	}
 }

@@ -38,8 +38,6 @@ public class Runner {
 		building[0][4] = new WarpZone(0, 4);
 		building[4][0] = new WarpZone(4, 0);
 		
-		DatBoi baus1 = new DatBoi(1, 1, 5, 5);
-		building[1][1] = new BausRoom (1, 1, baus1);
 		
 		
 		Board board = new Board (building);
