@@ -23,10 +23,10 @@ public class Runner {
 			}
 		}
 		
-		//Create a random winning room.
+
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
-		building[x][y] = new WinningRoom(x, y);
+
 		 
 		//Create a random TrapDoor.
 		building[x][y] = new Trapdoor(0, 1);
@@ -44,7 +44,7 @@ public class Runner {
 		
 		Board board = new Board (building);
 	
-		 //Setup player 1 and the input scanner
+		//Setup player 1 and the input scanner
 		Person player1 = new Person (0,0, 10, 10);
 		building[0][0].enterRoom(player1);
 		Scanner in = new Scanner(System.in);
