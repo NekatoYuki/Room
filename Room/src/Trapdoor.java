@@ -18,7 +18,11 @@ public class Trapdoor extends Room
 	public void toPrint()
 	{
 		{
+<<<<<<< HEAD
 			System.out.print("[  ]");
+=======
+			System.out.print("[ T ]");
+>>>>>>> branch 'master' of https://github.com/NekatoYuki/Room.git
 		}
 		
 	}

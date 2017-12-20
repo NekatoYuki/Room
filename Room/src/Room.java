@@ -25,11 +25,11 @@ public class Room {
 	{
 		if(occupant!= null)
 		{
-			System.out.print("[x ]");
+			System.out.print("[x  ]");
 		}
 		else
 		{
-			System.out.print("[  ]");
+			System.out.print("[   ]");
 		}
 	}
 }
