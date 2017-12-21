@@ -19,7 +19,14 @@ public class WinningRoom extends Room {
 	
 	public void toPrint()
 	{
-		System.out.print("[   ]");
+		if(occupant!= null)
+		{
+			System.out.print("[x  ]");
+		}
+		else
+		{
+			System.out.print("[   ]");
+		}
 	}
 }
 

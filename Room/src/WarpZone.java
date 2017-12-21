@@ -21,20 +21,11 @@ public class WarpZone extends Room {
 	{
 		if(occupant!= null)
 		{
-<<<<<<< HEAD
-			System.out.print("[(x]");
-			occupant = null;
-=======
 			System.out.print("[(x)]");
->>>>>>> branch 'master' of https://github.com/NekatoYuki/Room.git
 		}
 		else
 		{
-<<<<<<< HEAD
-			System.out.print("[()]");
-=======
-			System.out.print("[( )]");
->>>>>>> branch 'master' of https://github.com/NekatoYuki/Room.git
+			System.out.print("[() ]");
 		}
 	}
 }

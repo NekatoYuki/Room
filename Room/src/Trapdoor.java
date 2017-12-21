@@ -17,14 +17,14 @@ public class Trapdoor extends Room
 	
 	public void toPrint()
 	{
+		if(occupant!= null)
 		{
-<<<<<<< HEAD
-			System.out.print("[  ]");
-=======
-			System.out.print("[ T ]");
->>>>>>> branch 'master' of https://github.com/NekatoYuki/Room.git
+			System.out.print("[x  ]");
 		}
-		
+		else
+		{
+			System.out.print("[   ]");
+		}
 	}
 
 }

@@ -8,50 +8,44 @@ public class Runner {
 	public static void main(String[] args)
 	{
 		
-		
-
-		
-		
-		Room[][] building = new Room[5][5];
-		
-		//Fill the building with normal rooms
-		for (int x = 0; x<building.length; x++)
+		System.out.println("choose board boardSize: easy, medium, hard");
+		Board board = new Board(boardboardSize);
+		in tboardSize = 5;
+		Scanner input = new Scanner(System.in);
+		if (input.nextLine().equals("medium"))
 		{
-			for (int y = 0; y < building[x].length; y++)
-			{
-				building[x][y] = new Room(x,y);
-			}
+			boardSize = 7;
+			Board board = new Board (boardSize);
 		}
 		
+		else if (input.nextLine().equals("hard"))
+		{
+			boardSize = 10;
+			Board board = new Board (boardSize);
+		}
+		else 
+		{
+			Board board = new Board (boardSize);
+		}
+		for (int x = 0; x<boardSize; x++)
+		{
+			for (int y = 0; y < boardSize; y++)
+			{
+				rooms [x][y] = new Room(x,y);
+			}
+		}
 
-		int x = (int)(Math.random()*building.length);
-		int y = (int)(Math.random()*building.length);
-
-		 
-		//Create a random TrapDoor.
-		building[x][y] = new Trapdoor(0, 1);
-		building[x][y] = new Trapdoor(1, 2);
-		building[x][y] = new Trapdoor(2, 3);
-		
-		//Create a random WarpZone.
-		building[4][4] = new WarpZone(4, 4);
-		building[0][4] = new WarpZone(0, 4);
-		building[4][0] = new WarpZone(4, 0);
-		
-		
-		
-		Board board = new Board (building);
 	
 		//Setup player 1 and the input scanner
 		Person player1 = new Person (0,0, 10, 10);
-		building[0][0].enterRoom(player1);
+		board[0][0].enterRoom(player1);
 		Scanner in = new Scanner(System.in);
 		while(gameOn)
 		{
 			board.printboard();
 			System.out.println("Where would you like to move? (Choose W, A, S, D)");
 			String move = in.nextLine();
-			if(validMove(move, player1, building))
+			if(validMove(move, player1, board))
 			{
 				System.out.println("Your coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc());
 				
