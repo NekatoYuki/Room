@@ -45,4 +45,13 @@ public class Board
 		
 		
 	}
+
+	public Room getMiDaVodka(int x, int y)
+	{
+		return  Room[x][y];
+	}
+
+
+
+
 }
