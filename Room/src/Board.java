@@ -43,15 +43,19 @@ public class Board
 			System.out.println();
 		}
 		
-		
-	}
-
-	public Room getMiDaVodka(int x, int y)
-	{
-		return  Room[x][y];
+	
 	}
 
 
+	public Room[][] getRooms() {
+		return rooms;
+	}
 
+
+	public void setRooms(Room[][] rooms) {
+		this.rooms = rooms;
+	}
+
+	
 
 }
