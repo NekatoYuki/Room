@@ -9,31 +9,29 @@ public class Runner {
 	{
 		
 		System.out.println("choose board boardSize: easy, medium, hard");
-		Board board = new Board(boardboardSize);
-		in tboardSize = 5;
+		int boardSize = 5;
+		Board board = new Board(boardSize);
 		Scanner input = new Scanner(System.in);
 		if (input.nextLine().equals("medium"))
 		{
 			boardSize = 7;
-			Board board = new Board (boardSize);
+			Board boardM = new Board (boardSize);
+			board = boardM;
+			board.printboard();
 		}
 		
 		else if (input.nextLine().equals("hard"))
 		{
 			boardSize = 10;
-			Board board = new Board (boardSize);
+			Board boardH = new Board (boardSize);
+			board = boardH;
+			boardH.printboard();
 		}
 		else 
 		{
-			Board board = new Board (boardSize);
+			 board.printboard();
 		}
-		for (int x = 0; x<boardSize; x++)
-		{
-			for (int y = 0; y < boardSize; y++)
-			{
-				rooms [x][y] = new Room(x,y);
-			}
-		}
+		
 
 	
 		//Setup player 1 and the input scanner

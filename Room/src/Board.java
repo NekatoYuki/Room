@@ -3,7 +3,6 @@ public class Board
 {
 	private Room[][] rooms;
 	private int size;
-	private Board board;
 	public  Board(int size)
 	{
 		this.size = size;
@@ -11,7 +10,13 @@ public class Board
 		int x = (int)(Math.random()*size);
 		int y = (int)(Math.random()*size);
 
-		 
+		for ( x = 0; x<size; x++)
+		{
+			for ( y = 0; y < size; y++)
+			{
+				rooms [x][y] = new Room(x,y);
+			}
+		} 
 		//Create a random TrapDoor.
 		rooms[x][y] = new Trapdoor(0, 1);
 		rooms[x][y] = new Trapdoor(1, 2);
