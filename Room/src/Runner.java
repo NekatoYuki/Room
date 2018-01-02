@@ -11,39 +11,41 @@ public class Runner {
 		System.out.println("choose board boardSize: easy, medium, hard");
 		int boardSize = 5;
 		Board board = new Board(boardSize);
-		Scanner input = new Scanner(System.in);
-		if (input.nextLine().equals("medium"))
+		Scanner in = new Scanner(System.in);
+		if (in.nextLine().equals("medium"))
 		{
 			boardSize = 7;
 			Board boardM = new Board (boardSize);
 			board = boardM;
-			board.printboard();
+
+			
 		}
 		
-		else if (input.nextLine().equals("hard"))
+		else if (in.nextLine().equals("hard"))
 		{
 			boardSize = 10;
 			Board boardH = new Board (boardSize);
 			board = boardH;
-			boardH.printboard();
-		}
-		else 
-		{
-			 board.printboard();
+	
 		}
 		
+		else
+		{
+			
+		}
 
 	
 		//Setup player 1 and the input scanner
 		Person player1 = new Person (0,0, 10, 10);
-		board.getRooms.enterRoom(player1);
-		Scanner in = new Scanner(System.in);
+		Room Startroom = board.getRooms()[0][0];
+		Startroom.enterRoom(player1);
+	
 		while(gameOn)
 		{
 			board.printboard();
 			System.out.println("Where would you like to move? (Choose W, A, S, D)");
 			String move = in.nextLine();
-			if(validMove(move, player1, board))
+			if(validMove(move, player1, board.getRooms()))
 			{
 				System.out.println("Your coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc());
 				

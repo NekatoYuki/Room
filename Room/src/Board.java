@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 public class Board 
 {
 	private Room[][] rooms;
@@ -6,7 +6,7 @@ public class Board
 	public  Board(int size)
 	{
 		this.size = size;
-		
+		this.rooms = new Room [size][size];
 		int x = (int)(Math.random()*size);
 		int y = (int)(Math.random()*size);
 
@@ -17,16 +17,16 @@ public class Board
 				rooms [x][y] = new Room(x,y);
 			}
 		} 
-		//Create a random TrapDoor.
-		rooms[x][y] = new Trapdoor(0, 1);
-		rooms[x][y] = new Trapdoor(1, 2);
-		rooms[x][y] = new Trapdoor(2, 3);
-		
+		/*Create a random TrapDoor.
+		rooms[0][1] = new Trapdoor(0, 1);
+		rooms[1][2] = new Trapdoor(1, 2);
+		rooms[2][3] = new Trapdoor(2, 3);
+	
 		//Create a random WarpZone.
-		rooms[4][4] = new WarpZone(size-1, size-1);
-		rooms[0][4] = new WarpZone(0, size-1);
-		rooms[4][0] = new WarpZone(size-1, 0);
-		
+		rooms[size -1 ][size -1] = new WarpZone(size-1, size-1);
+		rooms[0][size -1 ] = new WarpZone(0, size-1);
+		rooms[size -1 ][0] = new WarpZone(size-1, 0);
+		*/
 	}
 	
 	
