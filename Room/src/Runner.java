@@ -8,7 +8,7 @@ public class Runner {
 	public static void main(String[] args)
 	{
 		
-		System.out.println("choose board boardSize: easy, medium, hard");
+		System.out.println("choose board boardSize:  medium *purchase OtHeR gAmE mOdE DLC to unlock hard mode* *Purchase all Surprise Boxes to unlock easy mode*");
 		int boardSize = 5;
 		Board board = new Board(boardSize);
 		Scanner in = new Scanner(System.in);
