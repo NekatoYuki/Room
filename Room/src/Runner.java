@@ -10,7 +10,7 @@ public class Runner {
 		
 		System.out.println("choose board size: easy medium hard");
 		int boardSize = 5;
-		Board board = new Board(boardSize);
+		Board board = new Board(boardSize, "easy");
 		Scanner in = new Scanner(System.in);
 		String chooseMode = in.nextLine();
 		
@@ -18,7 +18,7 @@ public class Runner {
 		if (chooseMode.equals("medium"))
 		{
 			boardSize = 7;
-			Board boardM = new Board (boardSize);
+			Board boardM = new Board (boardSize, "medium");
 			board = boardM;
 
 			
@@ -27,7 +27,7 @@ public class Runner {
 		else if (chooseMode.equals("hard"))
 		{
 			boardSize = 10;
-			Board boardH = new Board (boardSize);
+			Board boardH = new Board (boardSize, "hard");
 			board = boardH;
 	
 		}

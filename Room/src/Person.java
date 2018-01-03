@@ -58,6 +58,20 @@ public class Person {
 	{
 		System.out.print("x");
 	}
+	
+	//methods to add gold/hp/and attack stats to the player after doing certain actions
+	public void addGold(int amount)
+	{
+		this.gold= this.gold + amount;
+	}
+	public void addAttack(int amount)
+	{
+		this.Attac= this.Attac + amount;
+	}
+	public void addHp(int amount)
+	{
+		this.Protec= this.Protec + amount;
+	}
 }
 
 

@@ -39,7 +39,9 @@ public class EasyRoom extends Room
 				if (fightSequence(attack, hp, enemyHp, enemyAttack) == true) 
 				{
 					System.out.println("Congrats");
-					int gold = x.getGold() + 10;
+					//gold acquired for beating the room
+					int amount = 10;
+					x.addGold(amount);
 					inRoom = false;
 				
 				}
@@ -61,7 +63,7 @@ public class EasyRoom extends Room
 		}
 		else
 		{
-			System.out.print("[   ]");
+			System.out.print("[  g]");
 		}
 	}
 	
