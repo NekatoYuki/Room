@@ -4,15 +4,16 @@ public class Runner {
 	
 
 	public static boolean gameOn = true;
-	
+	public static boolean startup = true;
 	public static void main(String[] args)
 	{
 		
-		System.out.println("choose board boardSize:  medium *purchase OtHeR gAmE mOdE DLC to unlock hard mode* *Purchase all Surprise Boxes to unlock easy mode*");
+		System.out.println("choose board size: easy medium hard");
 		int boardSize = 5;
 		Board board = new Board(boardSize);
 		Scanner in = new Scanner(System.in);
-		if (in.nextLine().equals("medium"))
+		String chooseMode = in.nextLine();
+		if (chooseMode.equals("medium"))
 		{
 			boardSize = 7;
 			Board boardM = new Board (boardSize);
@@ -21,7 +22,7 @@ public class Runner {
 			
 		}
 		
-		else if (in.nextLine().equals("hard"))
+		else if (chooseMode.equals("hard"))
 		{
 			boardSize = 10;
 			Board boardH = new Board (boardSize);
@@ -29,11 +30,11 @@ public class Runner {
 	
 		}
 		
-		else
+		else if (chooseMode.equals("easy"))
 		{
 			
 		}
-
+		
 	
 		//Setup player 1 and the input scanner
 		Person player1 = new Person (0,0, 10, 10);
@@ -42,6 +43,7 @@ public class Runner {
 	
 		while(gameOn)
 		{
+			
 			board.printboard();
 			System.out.println("Where would you like to move? (Choose W, A, S, D)");
 			String move = in.nextLine();
