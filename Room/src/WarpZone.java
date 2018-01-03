@@ -22,6 +22,7 @@ public class WarpZone extends Room {
 		if(occupant!= null)
 		{
 			System.out.print("[(x)]");
+			occupant = null;
 		}
 		else
 		{
