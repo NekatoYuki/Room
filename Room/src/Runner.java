@@ -13,6 +13,8 @@ public class Runner {
 		Board board = new Board(boardSize);
 		Scanner in = new Scanner(System.in);
 		String chooseMode = in.nextLine();
+		
+		
 		if (chooseMode.equals("medium"))
 		{
 			boardSize = 7;
@@ -40,7 +42,6 @@ public class Runner {
 		Person player1 = new Person (0,0, 10, 10);
 		Room Startroom = board.getRooms()[0][0];
 		Startroom.enterRoom(player1);
-	
 		while(gameOn)
 		{
 			

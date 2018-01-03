@@ -24,7 +24,7 @@ public class Trapdoor extends Room
 		}
 		else
 		{
-			System.out.print("[   ]");
+			System.out.print("[ t ]");
 		}
 	}
 

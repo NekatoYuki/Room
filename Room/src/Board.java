@@ -18,7 +18,7 @@ public class Board
 			}
 		} 
 		//Create a random TrapDoor.
-		rooms[0][1] = new Trapdoor(0, 1);
+		
 		rooms[1][2] = new Trapdoor(1, 2);
 		rooms[2][3] = new Trapdoor(2, 3);
 	
@@ -27,6 +27,8 @@ public class Board
 		rooms[0][size -1 ] = new WarpZone(0, size-1);
 		rooms[size -1 ][0] = new WarpZone(size-1, 0);
 		
+		//Creates EasyRoom
+		rooms[0][1] = new EasyRoom(0, 1);
 	}
 	
 	
