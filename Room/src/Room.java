@@ -16,6 +16,10 @@ public class Room {
 		x.setyLoc(this.yLoc);
 	}
 	
+	public void leaveRoom(Person x)
+	{
+		occupant = null;
+	}
 	
 	public void toPrint()
 	{
