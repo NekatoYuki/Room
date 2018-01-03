@@ -16,16 +16,14 @@ public class Room {
 		x.setyLoc(this.yLoc);
 	}
 	
-	public void leaveRoom(Person x)
-	{
-		occupant = null;
-	}
 	
 	public void toPrint()
 	{
 		if(occupant!= null)
 		{
-			System.out.print("[x  ]");
+			System.out.print("[");
+			occupant.toPrint();
+			System.out.print("  ]");
 		}
 		else
 		{

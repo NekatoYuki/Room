@@ -39,7 +39,7 @@ public class Runner {
 		
 	
 		//Setup player 1 and the input scanner
-		Person player1 = new Person (0,0, 10, 10);
+		Person player1 = new Person (0,0, 15, 10, 0);
 		Room Startroom = board.getRooms()[0][0];
 		Startroom.enterRoom(player1);
 		while(gameOn)
@@ -48,7 +48,11 @@ public class Runner {
 			board.printboard();
 			System.out.println("Where would you like to move? (Choose W, A, S, D)");
 			String move = in.nextLine();
-			if(validMove(move, player1, board.getRooms()))
+			if (move.equals("i"))
+			{
+				System.out.println("Hp: " + player1.getProtec() + " " + "Attack: " + player1.getAttac() + " " + "Gold: " + player1.getGold());
+			}
+			else if(validMove(move, player1, board.getRooms()))
 			{
 				System.out.println("Your coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc());
 				

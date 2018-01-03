@@ -4,7 +4,15 @@ public class Person {
 	int Protec;
 	int Attac;
 	int xLoc, yLoc;
-	
+	int gold;
+	public int getGold() {
+		return gold;
+	}
+
+	public void setGold(int gold) {
+		this.gold = gold;
+	}
+
 	public int getxLoc() {
 		return xLoc;
 	}
@@ -37,15 +45,19 @@ public class Person {
 		Attac = attac;
 	}
 	
-	public Person (int xLoc, int yLoc, int Protec, int Attac)
+	public Person (int xLoc, int yLoc, int Protec, int Attac, int gold)
 	{
 		this.xLoc = xLoc;
 		this.yLoc = yLoc;
 		this.Protec = Protec;
 		this.Attac = Attac;
+		this.gold = gold;
 	}
 
-
+	public void toPrint()
+	{
+		System.out.print("x");
+	}
 }
 
 

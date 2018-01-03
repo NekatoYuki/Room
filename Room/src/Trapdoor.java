@@ -19,7 +19,9 @@ public class Trapdoor extends Room
 	{
 		if(occupant!= null)
 		{
-			System.out.print("[x  ]");
+			System.out.print("[");
+			occupant.toPrint();
+			System.out.print(" t]");
 			occupant = null;
 		}
 		else

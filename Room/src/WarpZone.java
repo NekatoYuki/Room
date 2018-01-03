@@ -19,16 +19,19 @@ public class WarpZone extends Room {
 
 	public void toPrint()
 	{
-		if(occupant!= null)
-		{
-			System.out.print("[(x)]");
-			occupant = null;
-		}
-		else
-		{
-			System.out.print("[() ]");
-		}
+			if(occupant!= null)
+			{
+				System.out.print("[(");
+				occupant.toPrint();
+				System.out.print(")]");
+				occupant = null;
+			}
+			else
+			{
+				System.out.print("[( )]");
+			}
 	}
+	
 }
 
 
