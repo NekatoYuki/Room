@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class BossRoom extends Room
 {
 	Boss boss;
+	//boss room is made by entering the location and the boss 
 	public BossRoom(int x, int y, Boss boss) 
 	{
 		super(x, y);
@@ -24,12 +25,13 @@ public class BossRoom extends Room
 		// gets the attack and hp stat from the player
 		int attack = x.getAttac();
 		int hp = x.getProtec();
-		//since this is an easy room, the enemy always have the same amount of hp and attack
+		
 		int enemyAttack= boss.getDMG();
 		int enemyHp = boss.getHp();
 		boolean inRoom = true;
 		while (inRoom)
 		{
+			
 			if (input.equals("fight"))
 			{
 				
@@ -43,7 +45,7 @@ public class BossRoom extends Room
 				if (EasyRoom.fightSequence(attack, hp, enemyHp, enemyAttack) == true) 
 				{
 					System.out.println("Congratulations on defeating the Boss you obtained the golden key!");
-					//gold acquired for beating the room
+					//Key acquired for beating the room
 					int amount = 1;
 					x.addKey(amount);
 					inRoom = false;
@@ -58,7 +60,7 @@ public class BossRoom extends Room
 			}
 		}
 	}
-
+	//how to print the boss room
 	public void toPrint()
 	{
 		if(occupant!= null)

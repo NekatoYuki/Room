@@ -27,6 +27,7 @@ public class EasyRoom extends Room
 		boolean inRoom = true;
 		while (inRoom)
 		{
+			//if fight is entered you start the fight
 			if (input.equals("fight"))
 			{
 				
@@ -47,7 +48,7 @@ public class EasyRoom extends Room
 				
 				}
 			}
-			
+			//when run is entered you exit the fight and can move away
 			if (input.equals("run"))
 			{
 				System.out.println("You ran away!");
@@ -68,7 +69,7 @@ public class EasyRoom extends Room
 			System.out.print("[  E]");
 		}
 	}
-	
+	// this makes it so when you walk into the room, random responses are generated
 	private String rERR()
 	{
 		

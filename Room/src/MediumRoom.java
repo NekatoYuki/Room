@@ -21,12 +21,13 @@ public class MediumRoom extends Room
 		// gets the attack and hp stat from the player
 		int attack = x.getAttac();
 		int hp = x.getProtec();
-		//since this is an easy room, the enemy always have the same amount of hp and attack
+		//enemy attack and hp
 		int enemyAttack= 6;
 		int enemyHp = 40;
 		boolean inRoom = true;
 		while (inRoom)
 		{
+			//when fight is entered, you start the battle sequence
 			if (input.equals("fight"))
 			{
 				
@@ -47,7 +48,7 @@ public class MediumRoom extends Room
 				
 				}
 			}
-			
+			//when run is entered, you cant fight
 			if (input.equals("run"))
 			{
 				System.out.println("You ran away!");
@@ -55,7 +56,7 @@ public class MediumRoom extends Room
 			}
 		}
 	}
-
+	//how the print the room
 	public void toPrint()
 	{
 		if(occupant!= null)

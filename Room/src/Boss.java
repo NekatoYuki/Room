@@ -3,7 +3,7 @@ public class Boss
 {
 	int Hp;
 	int DMG;
-
+	//boss is made with hp and attack stat only
 	public Boss (int Hp, int DMG)
 	{
 		this.Hp = Hp;

@@ -1,4 +1,4 @@
-//contributors:  Kenneth.
+//contributors:  Kenneth
 public class WinningRoom extends Room {
 
 
@@ -14,7 +14,7 @@ public class WinningRoom extends Room {
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
 		System.out.println("You found the winning room!");
-		
+		//can only win if you beat the boss and obtained the key
 		int key = x.getGoldenKey(); 
 		if (key  >= 1) 
 		{
@@ -27,7 +27,7 @@ public class WinningRoom extends Room {
 			System.out.println("The door is locked, you need a golden key");
 		}
 	}
-	
+	//how to print the board
 	public void toPrint()
 	{
 		if(occupant!= null)

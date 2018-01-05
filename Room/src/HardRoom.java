@@ -21,7 +21,7 @@ public class HardRoom extends Room
 		// gets the attack and hp stat from the player
 		int attack = x.getAttac();
 		int hp = x.getProtec();
-		//since this is an easy room, the enemy always have the same amount of hp and attack
+		//enemy hp and attack
 		int enemyAttack= 15;
 		int enemyHp = 50;
 		boolean inRoom = true;
@@ -55,7 +55,7 @@ public class HardRoom extends Room
 			}
 		}
 	}
-
+	//how to print the room
 	public void toPrint()
 	{
 		if(occupant!= null)

@@ -69,7 +69,7 @@ public class Person {
 		System.out.print("x");
 	}
 	
-	//methods to add gold/hp/and attack stats to the player after doing certain actions
+	//methods to add gold/hp/attack stats and golden keys to the player after doing certain actions
 	public void addGold(int amount)
 	{
 		this.gold= this.gold + amount;

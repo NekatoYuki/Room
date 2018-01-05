@@ -1,6 +1,6 @@
 
 //Nicholas Huynh shop to buy items
-//contributors: Nicholas Huynh, Dave
+
 
 import java.util.Scanner;
 public class MerchantRoom extends Room 
@@ -30,7 +30,7 @@ public class MerchantRoom extends Room
 		
 		if(input.equals("y"))
 		{
-			System.out.println("ahh good...what do you want to buy?!");
+			System.out.println("ahh good...what do you want to buy?! Select the number of the item you want to buy");
 			System.out.println("You may only purchase 1 thing at a time");
 			
 			//buying options
@@ -38,7 +38,7 @@ public class MerchantRoom extends Room
 			System.out.println("1. Sword(20 gold)");
 			System.out.println("2. Shield(30 gold)");
 			System.out.println("3. Armor(40 gold)");
-			System.out.println("4. Health potion (5 gold)");
+			System.out.println("4. Health potion *increases max hp* (5 gold)");
 			
 			Scanner inputBuy = new Scanner(System.in);
 			String inputb = inputBuy.nextLine();
@@ -166,11 +166,11 @@ public class MerchantRoom extends Room
 	{
 		if(occupant!= null)
 		{
-			System.out.print("[xme]");
+			System.out.print("[x $]");
 		}
 		else
 		{
-			System.out.print("[ me]");
+			System.out.print("[  $]");
 		}
 	}
 }

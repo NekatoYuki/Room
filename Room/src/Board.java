@@ -5,6 +5,7 @@ public class Board
 	private int size;
 	public  Board(int size, String difficulty)
 	{
+		//the size of the board is based on size that is entered from the runner
 		this.size = size;
 		this.rooms = new Room [size][size];
 		int warpzonerooms = 0;
@@ -24,7 +25,10 @@ public class Board
 				
 				int x = (int)(Math.random()*size);
 				int y = (int)(Math.random()*size);
+				if (x!= 0 || y!= 0)
+				{
 				rooms[x][y] = new WarpZone(x, y);
+				}
 			warpzonerooms++;
 			}
 		
@@ -62,7 +66,7 @@ public class Board
 			}
 			//generates a boss of easy difficulty and placing it in the center of the board
 			Boss boss = new Boss(150, 15);
-			rooms[3][3] = new BossRoom (3, 3, boss);
+			rooms[2][2] = new BossRoom (2, 2, boss);
 		}
 	
 		if (difficulty.equals("medium"))

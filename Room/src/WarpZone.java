@@ -8,6 +8,7 @@ public class WarpZone extends Room {
 		super(c, d);
 	}
 	@Override
+	//when you enter a warpzone you get teleported somewhere else
 	public void enterRoom(Person x)
 	{
 		isIn = true;
