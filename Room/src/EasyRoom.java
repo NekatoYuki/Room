@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class EasyRoom extends Room
@@ -9,8 +10,7 @@ public class EasyRoom extends Room
 
 	public void enterRoom(Person x)
 	{
-		System.out.println("You found 3 goblins. They have total hp of 30 and total damge of 3 per turn."
-				+ " Do you wish to fight or run?");
+		System.out.println(rERR() + " Do you wish to fight or run?");
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
@@ -38,7 +38,7 @@ public class EasyRoom extends Room
 				
 				if (fightSequence(attack, hp, enemyHp, enemyAttack) == true) 
 				{
-					System.out.println("Congrats");
+					System.out.println("Congratulations on defeating the enemy you looted 10 gold!");
 					//gold acquired for beating the room
 					int amount = 10;
 					x.addGold(amount);
@@ -67,6 +67,20 @@ public class EasyRoom extends Room
 			System.out.print("[  E]");
 		}
 	}
+	
+	private String rERR()
+	{
+		
+		Random r = new Random ();
+		
+			return rerr [r.nextInt(rerr.length)];
+		
+	}
+	
+	private String [] rerr = {"You found 3 goblins. They have total hp of 30 and total damge of 3 per turn",
+			"You found a bunch of green slimes. They have a combined hp of 30 and total damage of 3 per turn"
+			,"You found a group of retilian humaniod. They have a total hp of 30 and total damage of 3 per turn"
+					};
 	
 	public static boolean fightSequence(int attack, int hp, int enemyHp, int enemyAttack)
 	{
