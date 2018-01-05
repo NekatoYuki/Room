@@ -40,7 +40,7 @@ public class MediumRoom extends Room
 				{
 					System.out.println("Congrats");
 					//gold acquired for beating the room
-					int amount = 10;
+					int amount = 20;
 					x.addGold(amount);
 					inRoom = false;
 				
@@ -78,8 +78,8 @@ public class MediumRoom extends Room
 		
 	}
 	
-	private String [] rerr = {"You found a group of hell hounds. They have a combined hp of 40 and total damage of 6" + 
-			"You walked group of Treemen sucking water from the ground, they seem are quite angry. They have a combined hp of 40 and total damage of 6"
-			+"You accidently stepped on the tail of a bull monster. They have a combined hp of 40 and total damage of 6"
+	private String [] rerr = {"You found a group of hell hounds. They have a combined hp of 40 and total damage of 6",
+			"You walked group of Treemen doing whatever it is they do, they seem are quite angry. They have a combined hp of 40 and total damage of 6"
+			,"You accidently stepped on the tail of a bull monster. They have a combined hp of 40 and total damage of 6"
 					};
 }
