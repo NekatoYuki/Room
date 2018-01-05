@@ -1,6 +1,7 @@
+//contributors:  Dave
 import java.util.Random;
 import java.util.Scanner;
-//random comment
+
 public class MediumRoom extends Room
 {
 	public MediumRoom(int x, int y) 

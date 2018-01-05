@@ -1,4 +1,7 @@
+
 //Nicholas Huynh shop to buy items
+//contributors: Nicholas Huynh, Dave
+
 import java.util.Scanner;
 public class MerchantRoom extends Room 
 {

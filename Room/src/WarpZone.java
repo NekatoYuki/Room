@@ -1,4 +1,4 @@
-
+//contributors: Kenneth.
 public class WarpZone extends Room {
 	
 	Room[][] building = new Room[5][5];
@@ -16,14 +16,13 @@ public class WarpZone extends Room {
 		x.setyLoc((int)(Math.random()*building.length));
 		System.out.println("You have entered a WarpZone! Sending player to random room...");
 	}
-
+	//how to print the room
 	public void toPrint()
 	{
 			if(occupant!= null)
 			{
-				System.out.print("[(");
-				occupant.toPrint();
-				System.out.print(")]");
+				System.out.print("[( )]");
+				
 				occupant = null;
 			}
 			else

@@ -1,17 +1,20 @@
+//contributors:  Dave
 import java.util.Random;
 import java.util.Scanner;
-//random comment
+
 public class BossRoom extends Room
 {
-	
-	public BossRoom(int x, int y, String difficulty) 
+	Boss boss;
+	public BossRoom(int x, int y, Boss boss) 
 	{
 		super(x, y);
+		this.boss = boss;
 	}
 
 	public void enterRoom(Person x)
 	{
-		System.out.println(rERR() + " Do you wish to fight or run?");
+		System.out.println("The final boss you encountered is a " + rERR() + " it has hp of " +  boss.getHp() 
+		+  " and total damage of " + boss.getDMG() + " per turn" + " Do you wish to fight or run?");
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
@@ -22,8 +25,8 @@ public class BossRoom extends Room
 		int attack = x.getAttac();
 		int hp = x.getProtec();
 		//since this is an easy room, the enemy always have the same amount of hp and attack
-		int enemyAttack= 15;
-		int enemyHp = 50;
+		int enemyAttack= boss.getDMG();
+		int enemyHp = boss.getHp();
 		boolean inRoom = true;
 		while (inRoom)
 		{
@@ -41,8 +44,8 @@ public class BossRoom extends Room
 				{
 					System.out.println("Congratulations on defeating the Boss you obtained the golden key!");
 					//gold acquired for beating the room
-					int amount = 40;
-					x.addGold(amount);
+					int amount = 1;
+					x.addKey(amount);
 					inRoom = false;
 				
 				}
@@ -60,16 +63,16 @@ public class BossRoom extends Room
 	{
 		if(occupant!= null)
 		{
-			System.out.print("[x H]");
+			System.out.print("[x B]");
 			occupant = null;
 		}
 		else
 		{
-			System.out.print("[  H]");
+			System.out.print("[  B]");
 		}
 	}
 	
-	//a method that generates random responses when you enter the room
+	//a method that generates random bosses 
 	private String rERR()
 	{
 		
@@ -78,8 +81,9 @@ public class BossRoom extends Room
 			return rerr [r.nextInt(rerr.length)];
 		
 	}
-	
-	private String [] rerr = {"You stumbled upon a minotaur with a giant battleaxe. it has hp of 50 and total damage of 15 per turn",
-			"You disturbed a group of sleeping orcs, to say they were angry will be an understatement. They have a combined hp of 50 and total damage of 15 per turn"
-			,"You discovered a mysterious creature. Wonder what that thing is. It has a hp of 50 and total damage of 15 per turn"
+	//some actual enemies and then I decided to have some fun
+	private String [] rerr = {"mighty Hydra", "deadly Dragon", "Fire elemental Lord, Giant", "That one boss in that one hard game everyone knows about", "Some Knight with a big ol Sword "
 					};
+
+
+}
