@@ -1,6 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
-//random comment
+
 public class EasyRoom extends Room
 {
 	public EasyRoom(int x, int y) 

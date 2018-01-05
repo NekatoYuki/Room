@@ -1,6 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
-//random comment
+
 public class BossRoom extends Room
 {
 	

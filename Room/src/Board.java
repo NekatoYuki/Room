@@ -1,4 +1,4 @@
-//random comment
+
 public class Board 
 {
 	private Room[][] rooms;
