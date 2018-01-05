@@ -1,4 +1,4 @@
-//contributors: Kenneth 
+//contributors: Kenneth, Dave, Nicholas
 public class Person {
 	
 	int Protec;

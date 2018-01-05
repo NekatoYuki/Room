@@ -1,4 +1,4 @@
-//contributors:  Kenneth 
+//contributors:  Kenneth.
 public class WinningRoom extends Room {
 
 

@@ -1,4 +1,4 @@
-//contributors: Dave,
+//contributors: Dave
 public class Boss 
 {
 	int Hp;

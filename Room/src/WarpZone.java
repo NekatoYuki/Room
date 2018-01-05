@@ -1,4 +1,4 @@
-//contributors: Kenneth 
+//contributors: Kenneth.
 public class WarpZone extends Room {
 	
 	Room[][] building = new Room[5][5];

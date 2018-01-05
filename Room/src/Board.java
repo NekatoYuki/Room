@@ -1,4 +1,4 @@
-//contributors: Nicholas, Dave, Kenneth 
+//contributors: Nicholas, Dave, Kenneth.
 public class Board 
 {
 	private Room[][] rooms;

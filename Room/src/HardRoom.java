@@ -1,4 +1,4 @@
-//contributors: Kenneth 
+//contributors: Nicholas.
 import java.util.Random;
 import java.util.Scanner;
 
