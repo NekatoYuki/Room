@@ -64,6 +64,10 @@ public class Person {
 	{
 		this.gold= this.gold + amount;
 	}
+	public void subtractGold(int amount)
+	{
+		this.gold= this.gold - amount;
+	}
 	public void addAttack(int amount)
 	{
 		this.Attac= this.Attac + amount;
