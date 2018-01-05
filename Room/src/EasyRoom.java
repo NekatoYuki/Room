@@ -49,6 +49,7 @@ public class EasyRoom extends Room
 			
 			if (input.equals("run"))
 			{
+				System.out.println("You ran away!");
 				inRoom = false;
 			}
 		}
@@ -58,12 +59,12 @@ public class EasyRoom extends Room
 	{
 		if(occupant!= null)
 		{
-			System.out.print("[x g]");
+			System.out.print("[x E]");
 			occupant = null;
 		}
 		else
 		{
-			System.out.print("[  g]");
+			System.out.print("[  E]");
 		}
 	}
 	
