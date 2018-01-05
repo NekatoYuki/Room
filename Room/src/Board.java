@@ -30,7 +30,11 @@ public class Board
 				rooms[x][y] = new WarpZone(x, y);
 			warpzonerooms++;
 			}
-		
+		//Creates Merchant
+			int k = (int)(Math.random()*size);
+			int l = (int)(Math.random()*size);
+			rooms[k][l] = new MerchantRoom(k,l);
+			
 		//Creates EasyRoom based on difficulty
 		
 		if (difficulty.equals("easy"))
