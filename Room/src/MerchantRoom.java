@@ -1,3 +1,4 @@
+//contributors:  Dave, 
 import java.util.Scanner;
 public class MerchantRoom extends Room 
 {

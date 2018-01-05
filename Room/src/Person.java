@@ -1,10 +1,19 @@
-
+//contributors: Kenneth 
 public class Person {
 	
 	int Protec;
 	int Attac;
 	int xLoc, yLoc;
 	int gold;
+	int goldenKey;
+	public int getGoldenKey() {
+		return goldenKey;
+	}
+
+	public void setGoldenKey(int goldenKey) {
+		this.goldenKey = goldenKey;
+	}
+
 	public int getGold() {
 		return gold;
 	}
@@ -45,13 +54,14 @@ public class Person {
 		Attac = attac;
 	}
 	
-	public Person (int xLoc, int yLoc, int Protec, int Attac, int gold)
+	public Person (int xLoc, int yLoc, int Protec, int Attac, int gold, int goldenKey)
 	{
 		this.xLoc = xLoc;
 		this.yLoc = yLoc;
 		this.Protec = Protec;
 		this.Attac = Attac;
 		this.gold = gold;
+		this.goldenKey = goldenKey;
 	}
 
 	public void toPrint()
@@ -72,6 +82,12 @@ public class Person {
 	{
 		this.Protec= this.Protec + amount;
 	}
+	
+	public void addKey(int amount)
+	{
+		this.goldenKey= this.goldenKey + amount;
+	}
+
 }
 
 

@@ -1,4 +1,4 @@
-
+//contributors:  Kenneth 
 public class WinningRoom extends Room {
 
 
@@ -13,19 +13,30 @@ public class WinningRoom extends Room {
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
-		System.out.println("You found the winning room! Ten points for Gryffindor.");
-		Runner.gameOff();
+		System.out.println("You found the winning room!");
+		
+		int key = x.getGoldenKey(); 
+		if (key  >= 1) 
+		{
+			System.out.println("You opened the door with the key. Congratulations on beating the game You Win!");
+			Runner.gameOff();
+		}
+		
+		if(key<=1)
+		{
+			System.out.println("The door is locked, you need a golden key");
+		}
 	}
 	
 	public void toPrint()
 	{
 		if(occupant!= null)
 		{
-			System.out.print("[x  ]");
+			System.out.print("[X W]");
 		}
 		else
 		{
-			System.out.print("[   ]");
+			System.out.print("[(W)]");
 		}
 	}
 }

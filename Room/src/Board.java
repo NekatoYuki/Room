@@ -1,4 +1,4 @@
-//random comment
+//contributors: Nicholas, Dave, Kenneth 
 public class Board 
 {
 	private Room[][] rooms;
@@ -16,12 +16,9 @@ public class Board
 				rooms [a][b] = new Room(a,b);
 			}
 		} 
-		/*Create a random TrapDoor.
 		
-		rooms[1][2] = new Trapdoor(1, 2);
-		rooms[2][3] = new Trapdoor(2, 3);
 	
-		Create a random WarpZone.*/
+		//Create a random WarpZone.
 			while (warpzonerooms < 3)
 			{
 				
@@ -30,23 +27,22 @@ public class Board
 				rooms[x][y] = new WarpZone(x, y);
 			warpzonerooms++;
 			}
-		//Creates Merchant
-			int k = (int)(Math.random()*size);
-			int l = (int)(Math.random()*size);
-			rooms[k][l] = new MerchantRoom(k,l);
+		
 			
-		//Creates EasyRoom based on difficulty
+		//Creates the amount of hard/easy/medium rooms based on selected difficulty
 		
 		if (difficulty.equals("easy"))
 		{
 			int i =0;
 			int j =0;
+			
+			
 			while (i < 4)
 			{
 				int g = (int)(Math.random()*size);
 				int h = (int)(Math.random()*size);
-				//makes it so you can't spawn into a enemy room
-				if(g != 0 || h !=0) 
+				//makes it so you dont start in a enemy room
+				if(g != 0 || h !=0 ) 
 				{
 				rooms[g][h] = new EasyRoom(g, h);
 				}
@@ -55,20 +51,26 @@ public class Board
 		
 			while (j < 2)
 			{
-				int g = (int)(Math.random()*size);
-				int h = (int)(Math.random()*size);
+				int g1 = (int)(Math.random()*size);
+				int h1 = (int)(Math.random()*size);
 				//makes it so you can't spawn in an enemy room
-				if(g != 0 || h !=0) 
+				if(g1 != 0 || h1 !=0) 
 				{
-				rooms[g][h] = new MediumRoom(g, h);
+				rooms[g1][h1] = new MediumRoom(g1, h1);
 				}
 				j++;
 			}
+			//generates a boss of easy difficulty and placing it in the center of the board
+			Boss boss = new Boss(150, 15);
+			rooms[3][3] = new BossRoom (3, 3, boss);
 		}
 	
 		if (difficulty.equals("medium"))
 		{
 			int i =0;
+			int p =0;
+			int j =0;
+			
 			while (i < 5)
 			{
 				int g = (int)(Math.random()*size);
@@ -79,12 +81,41 @@ public class Board
 				}
 				i++;
 			}
+		
+			while (j < 6)
+			{
+				int g1 = (int)(Math.random()*size);
+				int h1 = (int)(Math.random()*size);
+				//makes it so you can't spawn in an enemy room
+				if(g1 != 0 || h1 !=0) 
+				{
+				rooms[g1][h1] = new MediumRoom(g1, h1);
+				}
+				j++;
+			}
+			
+			while (p < 3)
+			{
+				int g2 = (int)(Math.random()*size);
+				int h2 = (int)(Math.random()*size);
+				if(g2!= 0 || h2 !=0) 
+				{
+				rooms[g2][h2] = new HardRoom(g2, h2);
+				}
+				p++;
+			}
+			//generates a boss of medium difficulty and placing it in the center of the board
+			Boss boss = new Boss(150, 15);
+			rooms[3][3] = new BossRoom (3, 3, boss);
+		
 		}
 		
 		if (difficulty.equals("hard"))
 		{
 			int i =0;
-			while (i < 6)
+			int p =0;
+			int j =0;
+			while (i < 10)
 			{
 				int g = (int)(Math.random()*size);
 				int h = (int)(Math.random()*size);
@@ -94,11 +125,42 @@ public class Board
 				}
 				i++;
 			}
+		
+			while (j < 9)
+			{
+				int g1 = (int)(Math.random()*size);
+				int h1 = (int)(Math.random()*size);
+				//makes it so you can't spawn in an enemy room
+				if(g1 != 0 || h1 !=0) 
+				{
+				rooms[g1][h1] = new MediumRoom(g1, h1);
+				}
+				j++;
+			}
+			
+			while (p < 7)
+			{
+				int g2 = (int)(Math.random()*size);
+				int h2 = (int)(Math.random()*size);
+				if(g2 != 0 || h2 !=0) 
+				{
+				rooms[g2][h2] = new HardRoom(g2, h2);
+				}
+				p++;
+			}
+			
+			//generates a boss of medium difficulty and placing it in the center of the board
+			Boss boss = new Boss(300, 20);
+			rooms[5][5] = new BossRoom (5, 5, boss);
+		
 		}
-
+		//Creates Merchant Room
+		rooms[1][1] = new MerchantRoom(1,1);
+		//the winning room
+		rooms[3][3] = new WinningRoom (3, 3);
 	}
 	
-	
+	// how to print the board
 	public void printboard()
 	{
 
