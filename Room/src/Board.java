@@ -161,7 +161,7 @@ public class Board
 		//Creates Merchant Room
 		rooms[1][1] = new MerchantRoom(1,1);
 		//the winning room
-		rooms[3][3] = new WinningRoom (3, 3);
+		rooms[4][4] = new WinningRoom (3, 3);
 	}
 	
 	// how to print the board
